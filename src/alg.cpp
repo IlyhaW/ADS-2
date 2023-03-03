@@ -4,24 +4,23 @@
 
 double pown(double value, uint16_t n) {
     uint16_t constValue = value;
-    while(n > 1) {
+    while (n > 1) {
         value *= constValue;
         n--;
     }
     return value;
- }
- 
+}
+
 uint64_t fact(uint16_t n) {
     if (n == 0 || n == 1) {
         return 1;
-    }
-    else {
+    } else {
         return n*fact(n-1);
     }
 }
 
 double calcItem(double x, uint16_t n) {
-    return pown(x,n)/fact(n);
+    return pown(x, n)/fact(n);
 }
 
 double expn(double x, uint16_t count) {
